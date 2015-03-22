@@ -1,1 +1,90 @@
-default
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>First Names Tell Us A Lot</title>
+  <meta name="description" content="">
+  <meta name="author" content="Steph Carew">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>What&#39;s in a name?</h2>
+  <p><span style="font-size:1em;">
+Most first names tend not to stand the test of time. Combining a person&#39;s name with knowledge of how long a person typically lives gives us enough information to compute the distribution of how old a person is based on their first name.</span>  </p>
+
+<p><em>Check out the Shiny app</em> <a href="https://sc1463.shinyapps.io/names_likelihood">here</a> </p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Why do we care?</h2>
+  <p>This could be useful for any type of service that uses a recommendation algorithm to target customers that have given their name. For example, if you sign up for Netflix, it could use knowledge of the distribution of your age to provide better recommendations.</p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>what does the app do?</h2>
+  <p><img src="app_screenshot.png"  width="600" height="300" /><br>
+Takes in a name and outputs the number born and expected number still living over time. Check out the live version <a href="https://sc1463.shinyapps.io/names_likelihood">here</a> and the source code <a href="https://github.com/stephcarew/names">here</a></p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>It&#39;s also pretty fun</h2>
+  <p>Let&#39;s try the name <strong>Whitney</strong><br>
+<img src="assets/fig/slidify-1.png" alt="plot of chunk slidify"> </p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/a/a7/Whitney_Houston_Welcome_Home_Heroes_1_cropped.jpg" alt="HTMLQuick.com logo" width="88" height="88" /><br>
+<em>Think she had an effect?</em></p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>References</h2>
+  <ul>
+<li>The data for the number of births per year in the US came from the <a href="http://www.ssa.gov/OACT/babynames/limits.html">Social Security Website</a></li>
+<li>The data for survival probability came from the <a href="http://www.cdc.gov/nchs/data/nvsr/nvsr63/nvsr63_07.pdf">Centers for Disease Control and Prevention</a></li>
+</ul>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
